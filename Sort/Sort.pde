@@ -2,6 +2,7 @@ int numberOfNumbers = 100;
 float deltaX = 1;
 int [] numbers =  new int [numberOfNumbers];
 int step = 0;
+int temp =0;
 
 void setup(){
   size(600,400);
@@ -17,9 +18,9 @@ void draw(){
   //overlays
   background(240);
   displayValues();
-  if(step <numbers.length){
-    selectionSortStep();
-  }
+  selectionSortStep();
+  bubbleSortStep();
+  
 }
 
 //displays rectangles
@@ -35,15 +36,28 @@ void displayValues(){
 }
 
 void selectionSortStep(){
-  int smallSpot = step;
-  int temp =0;
-  for(int j =step; j< numbers.length; j++){
-    if(numbers[j] < numbers[smallSpot]){
-      smallSpot = j;
+  if(step <numbers.length){
+    int smallSpot = step;
+    for(int j =step; j< numbers.length; j++){
+      if(numbers[j] < numbers[smallSpot]){
+        smallSpot = j;
+      }
+    }
+    temp = numbers[step];
+    numbers[step] = numbers[smallSpot];
+    numbers[smallSpot] = temp;
+    step++;
+  }
+}
+
+void bubbleSortStep(){
+  for(int i =0; i< numbers.length-1; i++){
+    if(numbers[i]>numbers[i+1]){
+      //switch elements
+      temp = numbers[i];
+      numbers[i] = numbers[i+1];
+      numbers[i+1] = temp;
     }
   }
-  temp = numbers[step];
-  numbers[step] = numbers[smallSpot];
-  numbers[smallSpot] = temp;
   step++;
 }
