@@ -14,7 +14,7 @@ void setup(){
 
 //Draws stuff
 void draw(){
-  //overlays so old picture is gone
+  //overlays
   background(240);
   displayValues();
   if(step <numbers.length){
@@ -22,6 +22,7 @@ void draw(){
   }
 }
 
+//displays rectangles
 void displayValues(){
   for(int i =0; i<numbers.length; i++){
     if(i ==step){
