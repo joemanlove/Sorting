@@ -3,6 +3,7 @@ float deltaX = 1;
 int [] numbers =  new int [numberOfNumbers];
 int step = 0;
 int temp =0;
+boolean forward = true;
 
 void setup(){
   size(600,400);
@@ -19,8 +20,9 @@ void draw(){
   background(240);
   displayValues();
   //active Sorts
-  selectionSortStep();
-  bubbleSortStep();
+  //selectionSortStep();
+  //bubbleSortStep();
+  cocktailSortStep();
 }
 
 //displays rectangles
@@ -70,4 +72,29 @@ void bogoSortStep(){
 
 boolean isSorted(){
   return false;
+}
+
+void cocktailSortStep(){
+  if(forward){
+    for(int i =0; i< numbers.length-1; i++){
+      if(numbers[i]>numbers[i+1]){
+        //switch elements
+        temp = numbers[i];
+        numbers[i] = numbers[i+1];
+        numbers[i+1] = temp;
+      }
+    }
+    forward =! forward;
+  }else{
+    for(int i =numbers.length-1; i> 1; i--){
+      if(numbers[i-1]>numbers[i]){
+        //switch elements
+        temp = numbers[i];
+        numbers[i] = numbers[i-1];
+        numbers[i-1] = temp;
+      }
+    }
+    forward =! forward;
+  }
+  //step++;
 }
