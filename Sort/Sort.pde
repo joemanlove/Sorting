@@ -18,9 +18,9 @@ void draw(){
   //overlays
   background(240);
   displayValues();
+  //active Sorts
   selectionSortStep();
   bubbleSortStep();
-  
 }
 
 //displays rectangles
