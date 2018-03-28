@@ -61,3 +61,13 @@ void bubbleSortStep(){
   }
   step++;
 }
+
+void bogoSortStep(){
+  if(isSorted()){
+    //shuffle
+  }
+}
+
+boolean isSorted(){
+  return false;
+}
