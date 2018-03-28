@@ -11,7 +11,7 @@ void setup(){
     numbers[i] = int(random(height));
   }
   deltaX = width/numberOfNumbers;
-  frameRate(4);
+  frameRate(10);
 }
 
 //Draws stuff
@@ -28,11 +28,11 @@ void draw(){
 //displays rectangles
 void displayValues(){
   for(int i =0; i<numbers.length; i++){
-    if(i ==step){
-      fill(0,255,0);
-    }else{
-      fill(255);
-    }
+    //if(i ==step){
+    //  fill(0,255,0);
+    //}else{
+    //  fill(255);
+    //}
     rect(i*deltaX, height - numbers[i], deltaX, numbers[i]);
   }
 }
