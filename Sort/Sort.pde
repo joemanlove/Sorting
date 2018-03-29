@@ -1,3 +1,5 @@
+//Hello.
+
 int numberOfNumbers = 100;
 float deltaX = 1;
 int [] numbers =  new int [numberOfNumbers];
