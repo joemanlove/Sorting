@@ -1,3 +1,6 @@
+//Hello.
+//?
+//Corruption aghlsidftgywengiur  WD
 int numberOfNumbers = 100;
 float deltaX = 1;
 int [] numbers =  new int [numberOfNumbers];
@@ -6,18 +9,20 @@ int temp =0;
 boolean forward = true;
 
 void setup(){
-  size(600,400);
+  size(1000,400);
   for(int i =0; i<numbers.length; i++){
     numbers[i] = int(random(height));
   }
   deltaX = width/numberOfNumbers;
+
   frameRate(10);
+
 }
 
 //Draws stuff
 void draw(){
   //overlays
-  background(240);
+  background(0);
   displayValues();
   //active Sorts
   //selectionSortStep();
@@ -57,6 +62,8 @@ void bubbleSortStep(){
     if(numbers[i]>numbers[i+1]){
       //switch elements
       temp = numbers[i];
+      
+//Corruption
       numbers[i] = numbers[i+1];
       numbers[i+1] = temp;
     }
@@ -74,6 +81,7 @@ void bogoSortStep(){
 boolean isSorted(){
   return false;
 }
+
 
 void cocktailSortStep(){
   if(forward){
@@ -99,3 +107,4 @@ void cocktailSortStep(){
   }
   //step++;
 }
+
