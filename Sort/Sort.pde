@@ -67,6 +67,7 @@ void bubbleSortStep(){
 void bogoSortStep(){
   if(isSorted()){
     //shuffle
+    //numbers.shuffle
   }
 }
 
