@@ -7,18 +7,18 @@ int step = 0;
 int temp =0;
 
 void setup(){
-  size(600,400);
+  size(1000,400);
   for(int i =0; i<numbers.length; i++){
     numbers[i] = int(random(height));
   }
   deltaX = width/numberOfNumbers;
-  frameRate(4);
+  frameRate(5);
 }
 
 //Draws stuff
 void draw(){
   //overlays
-  background(240);
+  background(0);
   displayValues();
   //active Sorts
   selectionSortStep();
