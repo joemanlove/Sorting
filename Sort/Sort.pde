@@ -55,6 +55,8 @@ void bubbleSortStep(){
     if(numbers[i]>numbers[i+1]){
       //switch elements
       temp = numbers[i];
+      
+//Corruption
       numbers[i] = numbers[i+1];
       numbers[i+1] = temp;
     }
